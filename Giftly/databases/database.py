@@ -71,27 +71,3 @@ async def delete_gift(owned_id:int):
         await session.execute(requests)
         await session.commit()
 
-async def select_wallet(category, user_id = None):
-    async with async_session() as session:
-        if category == 'select':
-            requests = select(Deposit_TON).where(Deposit_TON.busy == False)
-        else:
-            requests = select(Deposit_TON).where(Deposit_TON.user_id == user_id)
-        result = await session.execute(requests)
-        gifts = result.scalars().all()
-    return gifts
-
-async def update_wallet(wallet:str, busy, user_id:int, last_hash = None):
-    async with async_session() as session:
-        res = {'busy': busy, 'user_id': user_id}
-        if last_hash != None:
-            res.setdefault('last_hash', last_hash)
-        request = (
-            update(Deposit_TON).
-            where(Deposit_TON.wallet_name == wallet).
-            values(res)
-        )
-
-        await session.execute(request)
-        await session.commit()
-

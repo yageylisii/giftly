@@ -1,12 +1,6 @@
-from Scripts.bottle import response
-
-from config import bot
-import asyncio
-from aiogram.methods import GetAvailableGifts
-import requests
 # # info = await bot.get_business_account_gifts('ZaEuVHZAWEaHAAAAOf7ssj4-XQ4')
 # url1 = f'https://api.telegram.org/bot7723902874:AAGgd5QffwNPZFpGUisoRcTn-0zcSx6mso8/getBusinessAccountGifts'
-url = f'https://api.telegram.org/bot7723902874:AAGgd5QffwNPZFpGUisoRcTn-0zcSx6mso8/getAvailableGifts'
+# url = f'https://api.telegram.org/bot7723902874:AAGgd5QffwNPZFpGUisoRcTn-0zcSx6mso8/getAvailableGifts'
 # # response = requests.post(url, data= {
 # #     'business_connection_id': 'ZaEuVHZAWEaHAAAAOf7ssj4-XQ4',
 # #     'owned_gift_id': '5170145012310081615',
@@ -18,6 +12,8 @@ url = f'https://api.telegram.org/bot7723902874:AAGgd5QffwNPZFpGUisoRcTn-0zcSx6ms
 # for x in inf:
 #     print(x['id'], x['star_count'], x['sticker']['emoji'])
 # print(response1.text)
+import json
+
 print(len("cell_🏆_7_['💐_0', '🏆_1', '🎁_2', '🎁_3', '🧸_4', '🌹_5', '🌹_6', '🏆_7', '🌹_8']"))
 
 
@@ -58,3 +54,20 @@ print(len("cell_🏆_7_['💐_0', '🏆_1', '🎁_2', '🎁_3', '🧸_4', '🌹_
 #     if x['hash'] == last_hash:
 #         break
 # print(new_deps)
+
+# def pole(a = list()):
+#     print(a)
+# pole()
+# a = '["fe", "efe"]'
+# b = json.loads(a)
+# print(type(b))
+# def divide(a, b):
+#     if b == 0: raise ZeroDivisionError
+#     return a / b
+# print(divide(1, 0))
+
+end_result = {}
+end_result.update(penis = 1, salo = 2)
+print(end_result)
+
+
